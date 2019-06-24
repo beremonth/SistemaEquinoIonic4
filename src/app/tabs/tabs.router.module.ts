@@ -8,7 +8,7 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'registrarCaballo',
         children: [
           {
             path: '',
@@ -17,7 +17,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab2',
+        path: 'visualizarCaballo',
         children: [
           {
             path: '',
@@ -26,11 +26,20 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab3',
+        path: 'consultarLista',
         children: [
           {
             path: '',
             loadChildren: '../tab3/tab3.module#Tab3PageModule'
+          }
+        ]
+      },
+      {
+        path: 'resultadoCompetencia',
+        children: [
+          {
+            path: '',
+            loadChildren: '../resultado/resultado.module#ResultadoPageModule'
           }
         ]
       },
@@ -43,7 +52,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/registrarCaballo',
     pathMatch: 'full'
   }
 ];
